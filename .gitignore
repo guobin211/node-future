@@ -86,3 +86,9 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+assets
+public
+*.png
+package-lock.json
+.idea
+.vscode
