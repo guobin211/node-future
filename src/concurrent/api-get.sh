@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# -c 并发
+# -c 线程
 # -n 总数
 # -s 超时时间10s
 
