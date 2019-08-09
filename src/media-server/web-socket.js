@@ -9,14 +9,14 @@ const http = require('http');
 const fs = require('fs');
 
 const clients = new Set();
-const img = '/Users/guobin/idea/deep-ai/node-future/src/media-server/';
+const img = '/Users/guobin/idea/node-future/src/media-server/';
 let log = 1;
 
 const wss = new WebSocket.Server({
   port: 12011,
   perMessageDeflate: {
     zlibDeflateOptions: {
-      chunkSize: 1024,
+      chunkSize: 1024 * 10,
       memLevel: 7,
       level: 3
     },
@@ -33,16 +33,19 @@ const wss = new WebSocket.Server({
   }
 });
 
-wss.on('connection', (ws) => {
+wss.on('connection', (client) => {
   // web连接上
-  clients.add(ws);
-  ws.on('message', (data) => {
+  clients.add(client);
+  client.on('message', (data) => {
     // 收到数据
     console.log('收到消息');
     if (log < 10) {
       console.log(data.length);
       log++;
-      fs.writeFileSync(img + log + '.png', data.toString());
+      fs.writeFileSync(img + log + '.png', data);
     }
+  });
+  client.on('close', (code, reason) => {
+    console.log(`客户端关闭,code: ${code}, reason: ${reason}`);
   })
 });
