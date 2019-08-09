@@ -1,9 +1,11 @@
 const fs = require('fs');
 
-const publicPath = '/Users/guobin/idea/deep-ai/node-future/public/';
+const publicPath = '/Users/guobin/idea/node-future/public/';
 
 const fileBuff1 = fs.readFileSync(publicPath + 'pic1.png');
 const fileBuff2 = fs.readFileSync(publicPath + 'pic2.png');
+
+console.log(fileBuff1.toString('hex'));
 
 function compareBuff(buff1, buff2) {
   const diff = new Map();

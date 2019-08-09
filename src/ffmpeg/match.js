@@ -9,9 +9,9 @@ const fs = require('fs');
 const PNG = require('pngjs').PNG;
 const PixelMatch = require('pixelmatch');
 
-const file1 = '/Users/guobin/idea/deep-ai/node-future/assets/video/00101.png';
-const file2 = '/Users/guobin/idea/deep-ai/node-future/assets/video/00105.png';
-const out = '/Users/guobin/idea/deep-ai/node-future/assets/diff.png';
+const file1 = '/Users/guobin/idea/node-future/src/media-server/2.png';
+const file2 = '/Users/guobin/idea/node-future/src/media-server/9.png';
+const out = '/Users/guobin/idea/node-future/assets/diff.png';
 
 /**
  * compare image
