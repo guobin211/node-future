@@ -35,3 +35,4 @@ console.log(obj1.__proto__);
 console.log(obj2.__proto__);
 obj3.name = 'obj3';
 console.log(obj3);
+console.log(process.memoryUsage());

@@ -3,67 +3,27 @@
  *
  * @author GuoBin on 2019-07-16
  */
-'use strict';
 
-function noop() {}
+module.export = class PromisePro {
 
-class PromisePro {
-  _deferredState;
-  _state;
-  _value;
-  _deferred;
-
-  _onHandle;
-  _onReject;
-  _noop;
-
-  static all(list) {
-
-  }
-
-  static race(list) {
-
-  }
-
-  static resolve(value) {
-
-  }
-
-  static reject(reason) {
-
-  }
-
-  constructor(fn) {
-    if (typeof fn !== 'function') {
+  constructor(executor) {
+    if (typeof executor !== 'function') {
       throw new TypeError('Promise constructor\'s argument is not a function');
     }
-    this._deferredState = 0;
-    this._state = 0;
-    this._value = null;
-    this._deferred = null;
-    if (fn === noop) {
-      return;
+    
+    try {
+      executor(resolve, reject);
+    } catch (e) {
+      reject(e)
     }
-    this._doResolve(fn);
   }
 
-  then(callback) {
-    callback();
+  resolve(value) {
+    
   }
 
-  catch(callback) {
-    callback()
-  }
-
-  finally(callback) {
-    callback()
-  }
-
-  allSettled(list) {
+  reject(value) {
 
   }
 
-  _doResolve(f) {
-
-  }
-}
+};
