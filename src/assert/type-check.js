@@ -1,14 +1,14 @@
 // 值为 0、-0、null、false、NaN、undefined、或者空字符串（""）,Boolean为false
 if (0) {
-    console.log('0 is true')
+  console.log('0 is true');
 } else {
-    console.log('0 is false')
+  console.log('0 is false');
 }
 
 if (1) {
-    console.log('1 is true')
+  console.log('1 is true');
 } else {
-    console.log('1 is false')
+  console.log('1 is false');
 }
 
 let data = 0;
@@ -26,8 +26,7 @@ console.log(!data);
 data = {};
 // false
 console.log(!data);
-data = () => {
-};
+data = () => {};
 // false
 console.log(!data);
 data = 'true';

@@ -1,4 +1,4 @@
-const {person, Car} = require('./person');
+const { person, Car } = require('./person');
 console.log(person);
 
 const car = new Car();

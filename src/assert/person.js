@@ -13,9 +13,10 @@ function Car() {
     // arguments接收函数参数
     console.log(arguments);
     const params = Object.values(arguments);
-    console.log(`${params[0]} ${this.name} is runing fast ${params[1]}`)
-  }
+    console.log(`${params[0]} ${this.name} is runing fast ${params[1]}`);
+  };
 }
+
 module.exports = {
   person,
   Car,
