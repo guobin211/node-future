@@ -6,14 +6,23 @@
 'use strict';
 const http = require('http');
 
+/**
+ *
+ * @returns {Promise<string>}
+ */
 function getJson() {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     setTimeout(() => {
-      resolve('getJson');
-    }, 100)
-  })
+      resolve('setTimeout');
+    }, 100);
+    resolve('getJson');
+  });
 }
 
+/**
+ * getData
+ * @returns {Promise<string>}
+ */
 async function getData() {
   try {
     const data = await getJson();
@@ -23,10 +32,13 @@ async function getData() {
   }
 }
 
-getData().then(res => {
-  console.log(res);
-}).catch(err => {
-  console.log(err);
-}).finally(() => {
-  console.log('complete')
-});
+getData()
+  .then(res => {
+    console.log(res);
+  })
+  .catch(err => {
+    console.log(err);
+  })
+  .finally(() => {
+    console.log('complete');
+  });

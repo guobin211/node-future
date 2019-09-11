@@ -5,25 +5,19 @@
  */
 
 module.export = class PromisePro {
-
   constructor(executor) {
     if (typeof executor !== 'function') {
-      throw new TypeError('Promise constructor\'s argument is not a function');
+      throw new TypeError("Promise constructor's argument is not a function");
     }
-    
+
     try {
       executor(resolve, reject);
     } catch (e) {
-      reject(e)
+      reject(e);
     }
   }
 
-  resolve(value) {
-    
-  }
+  resolve(value) {}
 
-  reject(value) {
-
-  }
-
+  reject(value) {}
 };
