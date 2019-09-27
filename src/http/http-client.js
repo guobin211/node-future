@@ -12,7 +12,7 @@ function postJson(url, data) {
     href: url, method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
   }, (response) => {
-    const res = '';
+    let res = '';
     response.setEncoding('utf8');
     response.on('data', (chunk) => {
       res += chunk.toString();

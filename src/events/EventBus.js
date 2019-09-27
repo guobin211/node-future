@@ -54,7 +54,7 @@ module.exports = exports = class EventBus {
     try {
       this._observers.get(type).forEach(observer => {
         observer.notice(message);
-      })
+      });
     } catch (e) {
       console.error(e.message);
     }
