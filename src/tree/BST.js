@@ -6,9 +6,6 @@
 'use strict';
 
 class Node {
-  e;
-  left;
-  right;
   constructor(element) {
     this.e = element;
     this.left = null;

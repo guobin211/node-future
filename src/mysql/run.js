@@ -38,7 +38,7 @@ function pageQuery(connect, page) {
  * @param callback
  */
 function tableCount(connect, callback) {
-    const sql = 'SELECT COUNT(*) FROM \`esg\`.\`tbl_company\`';
+    const sql = `SELECT COUNT(*) FROM \`esg\`.\`tbl_company\``;
     connect.query(sql, (err, results) => {
         if (err) {
             console.error(err);

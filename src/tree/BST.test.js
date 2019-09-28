@@ -7,7 +7,6 @@
 const BST = require('./BST');
 
 const bst = new BST();
-
 console.log(bst.size);
 
 bst.add(1);
