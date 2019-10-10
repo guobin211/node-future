@@ -1,11 +1,13 @@
 // 值为 0、-0、null、false、NaN、undefined、或者空字符串（""）,Boolean为false
-if (0) {
+let n = 0;
+if (n) {
   console.log('0 is true');
 } else {
   console.log('0 is false');
 }
 
-if (1) {
+n = 1;
+if (n) {
   console.log('1 is true');
 } else {
   console.log('1 is false');

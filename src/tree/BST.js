@@ -14,6 +14,13 @@ class Node {
 }
 
 module.exports = exports = class BST {
+  get size() {
+    return this._size;
+  }
+
+  get root() {
+    return this._root;
+  }
 
   constructor() {
     this._root = null;
@@ -33,9 +40,9 @@ module.exports = exports = class BST {
     }
 
     if (this._type !== null && this._type !== typeof e) {
-      throw new TypeError(`BST element type error: ${this._type}`)
+      throw new TypeError(`BST element type error: ${this._type}`);
     }
-    
+
     if (e < node.e) {
       node.left = this._add(node.left, e);
     } else if (e > node.right) {
@@ -44,13 +51,4 @@ module.exports = exports = class BST {
 
     return node;
   }
-
-  get size() {
-    return this._size;
-  }
-
-  get root() {
-    return this._root;
-  }
-
 };
