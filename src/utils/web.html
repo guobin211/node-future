@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Example</title>
+</head>
+<body>
+<div class="app">
+    <h1>Dom 操作</h1>
+    <ul class="ul">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<script src="domOperator.js"></script>
+<script>
+  console.log(domQuery)
+  const nodes =  domQuery('.app').nodes;
+  console.log(nodes)
+  domQuery('.app').attributes('lang', 'zh')('data-vue', 'title').inlineStyle('background-color', 'red')('color', '#fff')
+</script>
+</body>
+</html>
