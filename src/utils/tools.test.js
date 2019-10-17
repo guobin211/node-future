@@ -9,3 +9,5 @@ console.log(typeof date);
 // function
 console.log(typeof date.__proto__.constructor);
 console.log(Tools.isPlainObject(date));
+
+console.log(process.env);
