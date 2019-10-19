@@ -6,7 +6,7 @@
 </head>
 <body>
 <div class="app">
-    <h1>Dom 操作</h1>
+    <h1 onclick="handleClick(this)">Dom 操作</h1>
     <ul class="ul">
         <li>1</li>
         <li>2</li>
@@ -16,10 +16,30 @@
 </div>
 <script src="domOperator.js"></script>
 <script>
+  const vnode = Object.create(null)
+  const vdate = Object.create(null)
+
+  function handleClick(source) {
+    console.log(this)
+    console.log(source)
+    const map = Object.create(null)
+    for (const sourceKey in source) {
+      if (source[sourceKey] !== null) {
+        map[sourceKey] = source[sourceKey]
+      }
+    }
+    console.log(map)
+    map.innerHTML = "map Dom"
+    map.innerText = "map Dom"
+    // update
+    source.innerHTML = "map Dom"
+    source.innerText = "map Dom"
+  }
+
   console.log(domQuery)
-  const nodes =  domQuery('.app').nodes;
+  const nodes = domQuery(".app").nodes
   console.log(nodes)
-  domQuery('.app').attributes('lang', 'zh')('data-vue', 'title').inlineStyle('background-color', 'red')('color', '#fff')
+  domQuery(".app").attributes("lang", "zh")("data-vue", "title").inlineStyle("background-color", "red")("color", "#fff")
 </script>
 </body>
 </html>
