@@ -29,7 +29,6 @@ console.log(reduceSum(1,2,3,4))
 console.timeEnd('reduceSum')
 
 
-
 const code = ['a', 'return a + 2']
 
 function getAge(a) {

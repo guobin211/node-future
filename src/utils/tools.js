@@ -1,19 +1,18 @@
 'use strict';
 
 const toString = Object.prototype.toString;
+const types = {
+  '[object Boolean]': 'bool',
+  '[object Number]': 'number',
+  '[object String]': 'string',
+  '[object Object]': 'object',
+  '[object Array]': 'array',
+  '[object Function]': 'function',
+  '[object Date]': 'date',
+  '[object RegExp]': 'regExp',
+};
 
 module.exports = class Tools {
-  static types = {
-    '[object Boolean]': 'bool',
-    '[object Number]': 'number',
-    '[object String]': 'string',
-    '[object Object]': 'object',
-    '[object Array]': 'array',
-    '[object Function]': 'function',
-    '[object Date]': 'date',
-    '[object RegExp]': 'regExp',
-  };
-
   static getTag(obj) {
     if (obj == null) {
       return obj === undefined ? '[object Undefined]' : '[object Null]';
@@ -48,6 +47,6 @@ module.exports = class Tools {
     while (Object.getPrototypeOf(proto) !== null) {
       proto = Object.getPrototypeOf(proto);
     }
-    return Object.getPrototypeOf(value) === proto
+    return Object.getPrototypeOf(obj) === proto
   }
 };
