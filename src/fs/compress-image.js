@@ -100,10 +100,10 @@ function parsePng() {
           readIHDR({name, length});
           break;
         case PNG_CHUNK_TYPE.IDAT:
-          readChunk(readIDAT({name, chunk}));
+          readChunk(readIDAT({name, length}));
           break;
         case PNG_CHUNK_TYPE.PLTE:
-          readPLTE({name, chunk});
+          readPLTE({name, length});
           break;
         default:
           // 跳过其他数据块

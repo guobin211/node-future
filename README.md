@@ -29,6 +29,6 @@
 
 ### Dockerfile
 ```
-    docker的使用方式
+    docker build image
 
 ```
