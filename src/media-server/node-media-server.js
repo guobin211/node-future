@@ -49,22 +49,22 @@ nodeMediaServer.on('postPublish', (id, args) => {
 });
 
 nodeMediaServer.on('donePublish', (id, streamPath, args) => {
-  console.log('[NodeEvent on donePublish]', `id=${id} StreamPath=${StreamPath} args=${JSON.stringify(args)}`);
+  console.log('[NodeEvent on donePublish]', `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`);
 
 });
 
 nodeMediaServer.on('prePlay', (id, streamPath, args) => {
-  console.log('[NodeEvent on prePlay]', `id=${id} StreamPath=${StreamPath} args=${JSON.stringify(args)}`);
+  console.log('[NodeEvent on prePlay]', `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`);
 
 });
 
 nodeMediaServer.on('postPlay', (id, streamPath, args) => {
-  console.log('[NodeEvent on postPlay]', `id=${id} StreamPath=${StreamPath} args=${JSON.stringify(args)}`);
+  console.log('[NodeEvent on postPlay]', `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`);
 
 });
 
 nodeMediaServer.on('donePlay', (id, streamPath, args) => {
-  console.log('[NodeEvent on donePlay]', `id=${id} StreamPath=${StreamPath} args=${JSON.stringify(args)}`);
+  console.log('[NodeEvent on donePlay]', `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`);
 
 });
 nodeMediaServer.run();
