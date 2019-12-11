@@ -4,7 +4,7 @@
  * @author GuoBin on 2019-07-04
  */
 const http = require('http');
-const {readFileSync, readdirSync} = require('fs');
+const {readFileSync, readdirSync, createReadStream} = require('fs');
 const mime = require('mime');
 const html = readFileSync('./index.html');
 const css = readFileSync('./index.css');
@@ -40,6 +40,9 @@ const handleRequest = (request, response) => {
   const { method, url } = request;
   console.log(method);
   console.log(url);
+  if (url === '/post/file') {
+    // todo
+  }
   if (url === '/' || url === '/index.html') {
     response.statusCode = 200;
     response.setHeader('Content-Type', 'text/html;charset=utf-8');
