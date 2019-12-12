@@ -19,7 +19,7 @@ for (let i = 0; i < 10; i++) {
 
 const obj = data[1];
 
-function upword(obj) {
+function upWord(obj) {
     if (obj.sort !== 0) {
         const up = {...obj};
         up.sort = up.sort -1;
@@ -32,4 +32,4 @@ function upword(obj) {
     }
 }
 
-upword(obj);
+upWord(obj);

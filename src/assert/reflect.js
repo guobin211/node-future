@@ -23,7 +23,7 @@ nativeLog(...num)
 nativeLog.apply(null, num)
 Reflect.apply(nativeLog, null, num)
 
-let receve;
-receve = Reflect.get(num, 0)
+let receive;
+receive = Reflect.get(num, 0)
 // 1
-console.log(receve)
+console.log(receive)
