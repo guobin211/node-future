@@ -19,9 +19,7 @@ const p1 = {
   name: 'fyq',
   age: 19,
 }
-
 const data = null
-
 const p2 = test(p1)
 console.log(p1)
 console.log(p2)
