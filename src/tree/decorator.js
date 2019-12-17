@@ -16,10 +16,10 @@ Object.defineProperty(Car.prototype, 'run', {
 })
 new Car().run(90)
 Object.defineProperties(Car, {
-  'createTime': {
+  createTime: {
     writable: false,
-    value: new Date()
-  }
+    value: new Date(),
+  },
 })
 console.log(new Car())
 

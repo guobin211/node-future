@@ -1,7 +1,7 @@
 const isEmail = /(\w+)@(\w).(\w+)/i
 const re = /(\w+)\s(\w+)/
 
-let immediate =setImmediate(() => {
+let immediate = setImmediate(() => {
   console.log('immediate')
 })
 

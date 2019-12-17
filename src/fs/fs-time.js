@@ -19,7 +19,7 @@ const files = [
   './fs-time.js',
   './parse-json.js',
   './read-buffer.js',
-];
+]
 
 function logCall(data) {
   console.log(data.length)

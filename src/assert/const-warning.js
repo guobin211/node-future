@@ -1,5 +1,5 @@
 function test(person) {
-  person.age = 26;
+  person.age = 26
   /*
   * person.age = 26
   * var obj = {
@@ -10,19 +10,18 @@ function test(person) {
   * */
   person = {
     name: 'hzj',
-    age: 18
+    age: 18,
   }
   return person
 }
 
 const p1 = {
   name: 'fyq',
-  age: 19
+  age: 19,
 }
 
+const data = null
 
-const data = null;
-
-const p2 = test(p1);
-console.log(p1);
-console.log(p2);
+const p2 = test(p1)
+console.log(p1)
+console.log(p2)

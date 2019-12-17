@@ -1,6 +1,6 @@
-'use strict';
+'use strict'
 
-const toString = Object.prototype.toString;
+const toString = Object.prototype.toString
 const types = {
   '[object Boolean]': 'bool',
   '[object Number]': 'number',
@@ -10,12 +10,12 @@ const types = {
   '[object Function]': 'function',
   '[object Date]': 'date',
   '[object RegExp]': 'regExp',
-};
+}
 
 module.exports = class Tools {
   static getTag(obj) {
     if (obj == null) {
-      return obj === undefined ? '[object Undefined]' : '[object Null]';
+      return obj === undefined ? '[object Undefined]' : '[object Null]'
     }
     return toString.call(obj)
   }
@@ -26,9 +26,9 @@ module.exports = class Tools {
    * @returns {string[]}
    */
   static getAttributes(obj) {
-    console.log(typeof obj);
-    console.log(obj.__proto__);
-    return Object.keys(obj);
+    console.log(typeof obj)
+    console.log(obj.__proto__)
+    return Object.keys(obj)
   }
 
   /**
@@ -38,15 +38,15 @@ module.exports = class Tools {
    */
   static isPlainObject(obj) {
     if (Tools.getTag(obj) !== '[object Object]') {
-      return false;
+      return false
     }
     if (Object.getPrototypeOf(obj) === null) {
-      return true;
+      return true
     }
-    let proto = obj;
+    let proto = obj
     while (Object.getPrototypeOf(proto) !== null) {
-      proto = Object.getPrototypeOf(proto);
+      proto = Object.getPrototypeOf(proto)
     }
     return Object.getPrototypeOf(obj) === proto
   }
-};
+}

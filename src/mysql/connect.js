@@ -1,4 +1,4 @@
-const mysql = require('mysql');
+const mysql = require('mysql')
 
 /**
  * 连接mysql
@@ -6,15 +6,15 @@ const mysql = require('mysql');
  * @returns {Connection}
  */
 function createConnection(config) {
-    return mysql.createConnection({
-        host: config.host,
-        user: config.username,
-        password: config.password,
-        database: config.database,
-        port: config.port ? config.port : 3306
-    });
+  return mysql.createConnection({
+    host: config.host,
+    user: config.username,
+    password: config.password,
+    database: config.database,
+    port: config.port ? config.port : 3306,
+  })
 }
 
 module.exports = {
-    createConnection: createConnection
-};
+  createConnection: createConnection,
+}

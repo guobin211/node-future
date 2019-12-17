@@ -28,4 +28,4 @@ getDirs().then(res => {
   console.log(res)
 })
 
-getStats();
+getStats()

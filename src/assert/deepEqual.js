@@ -1,114 +1,119 @@
 module.exports = exports = {
   deepEqual: function(x, y) {
-    let i, l, leftChain, rightChain;
+    let i, l, leftChain, rightChain
 
     function compare2Objects(x, y) {
-      let p;
+      let p
 
       // remember that NaN === NaN returns false
       // and isNaN(undefined) returns true
-      if (isNaN(x) && isNaN(y) && typeof x === 'number' && typeof y === 'number') {
-        return true;
+      if (
+        isNaN(x) &&
+        isNaN(y) &&
+        typeof x === 'number' &&
+        typeof y === 'number'
+      ) {
+        return true
       }
 
       // Compare primitives and functions.
       // Check if both arguments link to the same object.
       // Especially useful on the step where we compare prototypes
       if (x === y) {
-        return true;
+        return true
       }
 
       // Works in case when functions are created in constructor.
       // Comparing dates is a common scenario. Another built-ins?
       // We can even handle functions passed across iframes
-      if ((typeof x === 'function' && typeof y === 'function') ||
+      if (
+        (typeof x === 'function' && typeof y === 'function') ||
         (x instanceof Date && y instanceof Date) ||
         (x instanceof RegExp && y instanceof RegExp) ||
         (x instanceof String && y instanceof String) ||
-        (x instanceof Number && y instanceof Number)) {
-        return x.toString() === y.toString();
+        (x instanceof Number && y instanceof Number)
+      ) {
+        return x.toString() === y.toString()
       }
 
       // At last checking prototypes as good as we can
       if (!(x instanceof Object && y instanceof Object)) {
-        return false;
+        return false
       }
 
       // eslint-disable-next-line no-prototype-builtins
       if (x.isPrototypeOf(y) || y.isPrototypeOf(x)) {
-        return false;
+        return false
       }
 
       if (x.constructor !== y.constructor) {
-        return false;
+        return false
       }
 
       if (x.prototype !== y.prototype) {
-        return false;
+        return false
       }
 
       // Check for infinitive linking loops
       if (leftChain.indexOf(x) > -1 || rightChain.indexOf(y) > -1) {
-        return false;
+        return false
       }
 
       for (p in y) {
         // eslint-disable-next-line no-prototype-builtins
         if (y.hasOwnProperty(p) !== x.hasOwnProperty(p)) {
-          return false;
+          return false
         } else if (typeof y[p] !== typeof x[p]) {
-          return false;
+          return false
         }
       }
 
       for (p in x) {
         // eslint-disable-next-line no-prototype-builtins
         if (y.hasOwnProperty(p) !== x.hasOwnProperty(p)) {
-          return false;
+          return false
         } else if (typeof y[p] !== typeof x[p]) {
-          return false;
+          return false
         }
 
-        switch (typeof(x[p])) {
+        switch (typeof x[p]) {
           case 'object':
           case 'function':
-
-            leftChain.push(x);
-            rightChain.push(y);
+            leftChain.push(x)
+            rightChain.push(y)
 
             if (!compare2Objects(x[p], y[p])) {
-              return false;
+              return false
             }
 
-            leftChain.pop();
-            rightChain.pop();
-            break;
+            leftChain.pop()
+            rightChain.pop()
+            break
 
           default:
             if (x[p] !== y[p]) {
-              return false;
+              return false
             }
-            break;
+            break
         }
       }
 
-      return true;
+      return true
     }
 
     if (arguments.length < 1) {
-      return true;
+      return true
     }
 
     for (i = 1, l = arguments.length; i < l; i++) {
-
-      leftChain = [];
-      rightChain = [];
+      leftChain = []
+      rightChain = []
 
       if (!compare2Objects(arguments[0], arguments[i])) {
-        return false;
+        return false
       }
     }
 
-    return true;
-  }
+    return true
+  },
 }

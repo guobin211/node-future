@@ -3,11 +3,11 @@
  *
  * @author GuoBin on 2019-07-16
  */
-'use strict';
+'use strict'
 
 module.exports = exports = class EventBus {
   constructor() {
-    this._observers = new Map();
+    this._observers = new Map()
   }
 
   /**
@@ -17,14 +17,14 @@ module.exports = exports = class EventBus {
    */
   register(type, observer) {
     if (typeof type !== 'string') {
-      throw new TypeError('type must be string!');
+      throw new TypeError('type must be string!')
     }
     if (this._observers.has(type)) {
-      this._observers.get(type).add(observer);
+      this._observers.get(type).add(observer)
     } else {
-      const _set = new Set();
-      _set.add(observer);
-      this._observers.set(type, _set);
+      const _set = new Set()
+      _set.add(observer)
+      this._observers.set(type, _set)
     }
   }
 
@@ -35,10 +35,10 @@ module.exports = exports = class EventBus {
    */
   unregister(type, observer) {
     if (typeof type !== 'string') {
-      throw new TypeError('type must be string!');
+      throw new TypeError('type must be string!')
     }
     if (this._observers.has(type)) {
-      this._observers.get(type).delete(observer);
+      this._observers.get(type).delete(observer)
     }
   }
 
@@ -49,14 +49,14 @@ module.exports = exports = class EventBus {
    */
   notify(type, message) {
     if (typeof type !== 'string') {
-      throw new TypeError('type must be string!');
+      throw new TypeError('type must be string!')
     }
     try {
       this._observers.get(type).forEach(observer => {
-        observer.notice(message);
-      });
+        observer.notice(message)
+      })
     } catch (e) {
-      console.error(e.message);
+      console.error(e.message)
     }
   }
-};
+}

@@ -1,13 +1,13 @@
-const Tools = require('./tools');
+const Tools = require('./tools')
 
-const date = new Date();
+const date = new Date()
 // Date
-const type = date.__proto__.constructor.name;
-console.log(type);
+const type = date.__proto__.constructor.name
+console.log(type)
 // object
-console.log(typeof date);
+console.log(typeof date)
 // function
-console.log(typeof date.__proto__.constructor);
-console.log(Tools.isPlainObject(date));
+console.log(typeof date.__proto__.constructor)
+console.log(Tools.isPlainObject(date))
 
-console.log(process.env);
+console.log(process.env)

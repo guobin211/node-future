@@ -1,28 +1,29 @@
 /**
-*
-*  domQuery('.testClass').attributes('lang', 'en')('title', 'Risus abundat in ore stultorum')
-*    .inlineStyle('background-color', 'black')('color', 'white')('width', '100px')('height', '50px');
-*
-* */
+ *
+ *  domQuery('.testClass').attributes('lang', 'en')('title', 'Risus abundat in ore stultorum')
+ *    .inlineStyle('background-color', 'black')('color', 'white')('width', '100px')('height', '50px');
+ *
+ * */
 var domQuery = (function() {
   if (!window.document) {
-    console.error("domQuery need document runtime")
+    console.error('domQuery need document runtime')
     return
   }
   const aDOMFunc = [
     Element.prototype.removeAttribute,
     Element.prototype.setAttribute,
     CSSStyleDeclaration.prototype.removeProperty,
-    CSSStyleDeclaration.prototype.setProperty
+    CSSStyleDeclaration.prototype.setProperty,
   ]
 
   function setSomething(bStyle, sProp, sVal) {
-    const bSet = Boolean(sVal), fAction = aDOMFunc[bSet | bStyle << 1],
+    const bSet = Boolean(sVal),
+      fAction = aDOMFunc[bSet | (bStyle << 1)],
       aArgs = Array.prototype.slice.call(arguments, 1, bSet ? 3 : 2),
       aNodeList = bStyle ? this.cssNodes : this.nodes
 
     if (bSet && bStyle) {
-      aArgs.push("")
+      aArgs.push('')
     }
     for (
       let nItem = 0, nLen = this.nodes.length;
@@ -49,11 +50,15 @@ var domQuery = (function() {
     return this.nodes
   }
 
-  return (function(sSelectors) {
-    const oQuery = new Function("return arguments.callee.follow.apply(arguments.callee, arguments);")
+  return function(sSelectors) {
+    const oQuery = new Function(
+      'return arguments.callee.follow.apply(arguments.callee, arguments);'
+    )
     oQuery.selectors = sSelectors
     oQuery.nodes = document.querySelectorAll(sSelectors)
-    oQuery.cssNodes = Array.prototype.map.call(oQuery.nodes, function(oInlineCSS) {
+    oQuery.cssNodes = Array.prototype.map.call(oQuery.nodes, function(
+      oInlineCSS
+    ) {
       return oInlineCSS.style
     })
     oQuery.attributes = setAttribs
@@ -62,5 +67,5 @@ var domQuery = (function() {
     oQuery.toString = getSelectors
     oQuery.valueOf = getNodes
     return oQuery
-  })
+  }
 })()

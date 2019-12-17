@@ -3,8 +3,8 @@
  *
  * @author GuoBin on 2019-07-16
  */
-'use strict';
-const http = require('http');
+'use strict'
+const http = require('http')
 
 /**
  *
@@ -13,10 +13,10 @@ const http = require('http');
 function getJson() {
   return new Promise(resolve => {
     setTimeout(() => {
-      resolve('setTimeout');
-    }, 100);
-    resolve('getJson');
-  });
+      resolve('setTimeout')
+    }, 100)
+    resolve('getJson')
+  })
 }
 
 /**
@@ -25,20 +25,20 @@ function getJson() {
  */
 async function getData() {
   try {
-    const data = await getJson();
-    return data.length > 0 ? data : 'empty data';
+    const data = await getJson()
+    return data.length > 0 ? data : 'empty data'
   } catch (e) {
-    console.log(e.message);
+    console.log(e.message)
   }
 }
 
 getData()
   .then(res => {
-    console.log(res);
+    console.log(res)
   })
   .catch(err => {
-    console.log(err);
+    console.log(err)
   })
   .finally(() => {
-    console.log('complete');
-  });
+    console.log('complete')
+  })

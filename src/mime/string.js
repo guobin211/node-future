@@ -18,4 +18,4 @@ console.log(String.fromCharCode(0x2014))
 console.log(String.fromCharCode(0x12014))
 // 指定的代码点序列创建的字符串
 console.log(String.fromCodePoint(42))
-console.log(String.fromCodePoint(9731, 9733, 9842, 0x2F804));
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804))

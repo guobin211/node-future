@@ -1,4 +1,4 @@
-const mysqlx = require('@mysql/xdevapi');
+const mysqlx = require('@mysql/xdevapi')
 /**
  getSession
  getClient
@@ -7,4 +7,4 @@ const mysqlx = require('@mysql/xdevapi');
  LockContention
  getVersion
  */
-Object.keys(mysqlx).forEach(el => console.log(el));
+Object.keys(mysqlx).forEach(el => console.log(el))

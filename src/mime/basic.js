@@ -29,7 +29,7 @@ console.log(sum(1, 2))
 
 const jack = {
   name: 'jack',
-  age: 22
+  age: 22,
 }
 
 for (const [key, val] of Object.entries(jack)) {

@@ -18,15 +18,15 @@ function printTask() {
 }
 
 /*
-* 宏任务
-* 1. setTimeout setInterval
-* 2. setImmediate requestAnimationFrame
-* 3. I/O
-* */
+ * 宏任务
+ * 1. setTimeout setInterval
+ * 2. setImmediate requestAnimationFrame
+ * 3. I/O
+ * */
 
 fs.readFile('./es2018.js', () => {
   console.log('node I/O')
-  printTask();
+  printTask()
 })
 
 setImmediate(() => {
@@ -34,19 +34,16 @@ setImmediate(() => {
   printTask()
 })
 
-
 setTimeout(() => {
   console.log('setTimeout')
   printTask()
 })
 
-
-
 /*
-* 微任务
-* 1. process.nextTick
-* 2. Promise queueMicrotask  MutationObserver
-* */
+ * 微任务
+ * 1. process.nextTick
+ * 2. Promise queueMicrotask  MutationObserver
+ * */
 
 global.queueMicrotask(() => {
   console.log('queueMicrotask')
@@ -55,14 +52,12 @@ global.queueMicrotask(() => {
 
 Promise.resolve().then(() => {
   console.log('Promise')
-  printTask();
+  printTask()
 })
 
 process.nextTick(() => {
   console.log('process.nextTick')
-  printTask();
+  printTask()
 })
 
-printTask();
-
-
+printTask()

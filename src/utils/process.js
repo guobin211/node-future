@@ -39,12 +39,12 @@
  * },
  * title: '进程标题'
  * argv: [] node 参数
-*/
+ */
 function checkProcess() {
-    // console.log(process);
-    // console.log(Object.keys(process));
-    console.log(process.argv);
-    console.log(process.env);
+  // console.log(process);
+  // console.log(Object.keys(process));
+  console.log(process.argv)
+  console.log(process.env)
 }
 
-checkProcess();
+checkProcess()

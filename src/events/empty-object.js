@@ -16,9 +16,9 @@ const proxyHandler = {
       console.error('cant set name prop')
       return
     }
-    target[name] = value;
-    notify(target, name, value);
-  }
+    target[name] = value
+    notify(target, name, value)
+  },
 }
 
 // const keys = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
