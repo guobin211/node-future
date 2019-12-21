@@ -1,5 +1,5 @@
 ///
-/// Proomise/A+
+/// Promise/A+
 ///
 let _state = 'pending'
 let _value = undefined
