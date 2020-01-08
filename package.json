@@ -1,7 +1,7 @@
 {
   "name": "future",
   "version": "1.0.0",
-  "description": "node 12.5",
+  "description": "node 13.5 test",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -14,3 +14,6 @@ sudo docker image build -t guobin/project-web . &&
 
 # 运行服务
 sudo docker run -d --name=project -p 8889:8889 guobin/project-web
+
+# use vim edut config file use `:wq` to save file
+

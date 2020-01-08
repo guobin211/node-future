@@ -39,3 +39,4 @@ function stepTest() {
 }
 
 stepTest()
+// async and await 只能保证js 块区域最后执行
