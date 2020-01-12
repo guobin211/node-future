@@ -19,6 +19,7 @@ function getJson() {
   })
 }
 
+
 /**
  * getData
  * @returns {Promise<string>}
