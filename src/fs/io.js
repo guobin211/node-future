@@ -52,6 +52,3 @@ function openReadFile(path) {
 
 nodeWrite('node.txt')
 openReadFile('node.txt')
-
-
-

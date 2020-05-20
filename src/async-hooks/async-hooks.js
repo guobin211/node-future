@@ -12,4 +12,3 @@ const asyncHook = async_hook.createHook({
   after(asyncId) {},
   destroy(asyncId) {},
 })
-

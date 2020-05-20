@@ -14,5 +14,3 @@ terminal.stdout.on('close', () => {
 terminal.stderr.on('data', err => {
   console.log(err.toString())
 })
-
-

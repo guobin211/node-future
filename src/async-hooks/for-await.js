@@ -1,8 +1,8 @@
 const fs = require('fs')
 
 const files = fs.readdirSync('./')
-let i = 1;
-let b = 1;
+let i = 1
+let b = 1
 function timer() {
   files.forEach(item => {
     console.log(i++)
@@ -16,8 +16,8 @@ function timer() {
 // timer()
 
 files.forEach(item => {
-   const res = fs.readFileSync(item)
-   // console.log(res.length)
+  const res = fs.readFileSync(item)
+  // console.log(res.length)
 })
 
 async function testAw() {
@@ -43,7 +43,7 @@ async function test(n) {
 }
 
 async function testArr() {
-  [0, 1, 2].forEach(test)
+  ;[0, 1, 2].forEach(test)
   // 不保证最后执行
   console.log('testArr(): over')
 }
