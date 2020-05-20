@@ -4,8 +4,7 @@
  * @author GuoBin on 2019-07-16
  */
 'use strict'
-
-module.exports = exports = class EventBus {
+class EventBus {
   constructor() {
     this._observers = new Map()
   }
@@ -60,3 +59,4 @@ module.exports = exports = class EventBus {
     }
   }
 }
+module.exports = exports = EventBus
