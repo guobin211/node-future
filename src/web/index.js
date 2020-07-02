@@ -4,26 +4,27 @@
  * @Author GuoBin<guobin201314@gmail.com>
  * @Project node-future
  */
-const G6 = window.G6;
-window.onload = function () {
-  setTimeout(()=> {  initChart()}, 33)
+const G6 = window.G6
+window.onload = function() {
+  setTimeout(() => {
+    initChart()
+  }, 33)
 }
 
 function getSize() {
-  const {clientWidth, clientHeight} = window.document.body
+  const { clientWidth, clientHeight } = window.document.body
   const dpr = window.devicePixelRatio
   return { width: clientWidth * dpr, height: clientHeight * dpr }
 }
 
 function getLayoutSize() {
   const el = document.getElementById('mountNode')
-  const width = el.scrollWidth;
-  const height = el.scrollHeight || 500;
-  return {width, height}
+  const width = el.scrollWidth
+  const height = el.scrollHeight || 500
+  return { width, height }
 }
 
-function getDefault() {
-}
+function getDefault() {}
 
 function initChart() {
   const data = {
@@ -99,8 +100,8 @@ function initChart() {
         target: '7',
       },
     ],
-  };
-  const {width, height} = getLayoutSize()
+  }
+  const { width, height } = getLayoutSize()
   const graph = new G6.Graph({
     container: 'mountNode',
     width,
@@ -131,11 +132,11 @@ function initChart() {
       style: {
         endArrow: {
           path: 'M 0,0 L 8,4 L 8,-4 Z',
-          fill: '#e2e2e2'
+          fill: '#e2e2e2',
         },
       },
     },
-  });
-  graph.data(data);
-  graph.render();
+  })
+  graph.data(data)
+  graph.render()
 }

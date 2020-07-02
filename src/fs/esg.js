@@ -6,7 +6,7 @@ const tw = require('../../assets/data/zh-hk.json')
 const en = require('../../assets/data/en.json')
 
 function mergeLang(source, input, out) {
-  for (const key in source){
+  for (const key in source) {
     if (input[key]) {
       source[key] = input[key]
     }

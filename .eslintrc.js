@@ -15,6 +15,6 @@ module.exports = {
   },
   rules: {
     'no-unused-vars': 'off',
-    'no-extra-semi': 0
+    'no-extra-semi': 0,
   },
 }

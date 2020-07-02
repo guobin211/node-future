@@ -1,6 +1,6 @@
-let interval;
+let interval
 
-const animate = (fn) => {
+const animate = fn => {
   clearInterval(interval)
   setInterval(fn, 1000)
 }
@@ -8,4 +8,3 @@ const animate = (fn) => {
 function tap() {
   console.log(1)
 }
-
