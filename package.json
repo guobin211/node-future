@@ -36,7 +36,6 @@
     "images": "^3.0.2",
     "mime": "^2.4.4",
     "mime-types": "^2.1.24",
-    "node": "^13.3.0",
     "node-media-server": "^2.1.2",
     "pixelmatch": "^5.0.2",
     "pngjs": "^3.4.0",
