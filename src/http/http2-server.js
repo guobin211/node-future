@@ -34,6 +34,6 @@ server.on("error", function(error) {
 
 server.on("request", onRequest)
 
-server.listen(8443, () => {
+server.listen(443, () => {
   console.log("http2 listen: https://localhost:8443")
 })
