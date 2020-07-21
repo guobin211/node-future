@@ -1,6 +1,9 @@
 const http2 = require("http2")
 const fs = require("fs")
-
+/**
+ * http2 具有多路复用的特性，同一个tcp链接传输多个http请求，采用二进制方式传输数据
+ * @type {Http2SecureServer} node server
+ */
 const server = http2.createSecureServer({
   key: fs.readFileSync("秘钥.pem"),
   cert: fs.readFileSync("证书.pem")
