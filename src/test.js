@@ -17,3 +17,12 @@ terminal.stderr.on('data', err => {
 process.on("uncaughtException", (error) => {
   console.error(error)
 })
+
+function Person(name = "", age = 0) {
+  this._name = name;
+  this._age = age;
+}
+
+const p1 = new Person("jack", 22)
+const p2 = new Person("tom", 19)
+console.log(p1.name)
