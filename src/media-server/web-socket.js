@@ -3,13 +3,13 @@
  *
  * @author GuoBin on 2019-07-22
  */
-'use strict'
-const WebSocket = require('ws')
-const http = require('http')
-const fs = require('fs')
+"use strict"
+const WebSocket = require("ws")
+const http = require("http")
+const fs = require("fs")
 
 const clients = new Set()
-const img = '/Users/guobin/idea/node-future/src/media-server/'
+const img = "/Users/guobin/idea/node-future/src/media-server/"
 let log = 1
 
 const wss = new WebSocket.Server({
@@ -33,19 +33,19 @@ const wss = new WebSocket.Server({
   },
 })
 
-wss.on('connection', client => {
+wss.on("connection", client => {
   // web连接上
   clients.add(client)
-  client.on('message', data => {
+  client.on("message", data => {
     // 收到数据
-    console.log('收到消息')
+    console.log("收到消息")
     if (log < 10) {
       console.log(data.length)
       log++
-      fs.writeFileSync(img + log + '.png', data)
+      fs.writeFileSync(img + log + ".png", data)
     }
   })
-  client.on('close', (code, reason) => {
+  client.on("close", (code, reason) => {
     console.log(`客户端关闭,code: ${code}, reason: ${reason}`)
   })
 })

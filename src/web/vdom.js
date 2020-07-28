@@ -4,7 +4,6 @@
 // 比起后面的 DOM 操作来说，依然便宜了太多。可以看到，innerHTML 的总计算量不管是 js 计算还是 DOM 操作都是和整个界面的大小相关，
 // 但 Virtual DOM 的计算量里面，只有 js 计算和界面大小相关，DOM 操作是和数据的变动量相关的。
 
-
 function renderHtml(el, dom) {
   el.innerHeight = dom
 }
@@ -21,7 +20,7 @@ function renderAndDiff(el, dom) {
   // O(N)LogN
   function compare(oldDom, newDom) {
     // 对比新旧dom，返回需要更新的dom
-    return newDom - oldDom;
+    return newDom - oldDom
   }
 }
 

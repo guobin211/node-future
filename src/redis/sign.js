@@ -1,7 +1,7 @@
 const crypto = require("crypto")
 
 const { privateKey, publicKey } = crypto.generateKeyPairSync("ec", {
-  namedCurve: "sect239k1"
+  namedCurve: "sect239k1",
 })
 
 const sign = crypto.createSign("SHA256")

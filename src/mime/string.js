@@ -1,13 +1,13 @@
 console.log(String.prototype)
 
-const str = 'jack'
-const stro = new String('jack')
+const str = "jack"
+const stro = new String("jack")
 // false
 console.log(str === stro)
 let strref = stro
 // true
 console.log(strref === stro)
-strref += ''
+strref += ""
 // false
 console.log(strref === stro)
 console.log(str.charAt(0))

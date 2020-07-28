@@ -10,8 +10,8 @@ module.exports = exports = {
       if (
         isNaN(x) &&
         isNaN(y) &&
-        typeof x === 'number' &&
-        typeof y === 'number'
+        typeof x === "number" &&
+        typeof y === "number"
       ) {
         return true
       }
@@ -27,7 +27,7 @@ module.exports = exports = {
       // Comparing dates is a common scenario. Another built-ins?
       // We can even handle functions passed across iframes
       if (
-        (typeof x === 'function' && typeof y === 'function') ||
+        (typeof x === "function" && typeof y === "function") ||
         (x instanceof Date && y instanceof Date) ||
         (x instanceof RegExp && y instanceof RegExp) ||
         (x instanceof String && y instanceof String) ||
@@ -77,8 +77,8 @@ module.exports = exports = {
         }
 
         switch (typeof x[p]) {
-          case 'object':
-          case 'function':
+          case "object":
+          case "function":
             leftChain.push(x)
             rightChain.push(y)
 

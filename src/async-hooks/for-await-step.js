@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require("fs")
 
 function sleep(timeout) {
   return new Promise((resolve, reject) => {
@@ -8,9 +8,9 @@ function sleep(timeout) {
 
 function testSleep() {
   sleep(1000).then(_ => {
-    console.log('sleep...')
+    console.log("sleep...")
   })
-  console.log('testSleep')
+  console.log("testSleep")
 }
 
 // testSleep()
@@ -18,11 +18,11 @@ function testSleep() {
 const arr = [1, 2, 3]
 async function test() {
   for (const n of arr) {
-    console.log('before(): ' + n)
+    console.log("before(): " + n)
     await sleep(500)
-    console.log('after(): ' + n)
+    console.log("after(): " + n)
   }
-  console.log('test(): over')
+  console.log("test(): over")
 }
 
 // test().then()
@@ -30,11 +30,11 @@ async function test() {
 function stepTest() {
   for (let i = 0; i < arr.length; i++) {
     const arrElement = arr[i]
-    console.log('before(): ' + arrElement)
+    console.log("before(): " + arrElement)
     sleep(500).then(_ => {
       console.log(arrElement)
     })
-    console.log('after(): ' + arrElement)
+    console.log("after(): " + arrElement)
   }
 }
 

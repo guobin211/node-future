@@ -1,6 +1,6 @@
-const fs = require('fs')
+const fs = require("fs")
 
-const files = fs.readdirSync('./')
+const files = fs.readdirSync("./")
 let i = 1
 let b = 1
 function timer() {
@@ -37,22 +37,22 @@ async function sleep(timeout) {
 }
 
 async function test(n) {
-  console.log('do before sleep(): ' + n)
+  console.log("do before sleep(): " + n)
   await sleep(1000)
-  console.log('do after sleep()' + n)
+  console.log("do after sleep()" + n)
 }
 
 async function testArr() {
   ;[0, 1, 2].forEach(test)
   // 不保证最后执行
-  console.log('testArr(): over')
+  console.log("testArr(): over")
 }
 
 testArr().then()
 async function testFaw() {
   await Promise.all([0, 1, 2].map(test))
   // 保证最后执行
-  console.log('testFaw(): over')
+  console.log("testFaw(): over")
 }
 
 testFaw().then()

@@ -1,6 +1,6 @@
 const empty = Object.create(null)
 
-empty.name = 'empty'
+empty.name = "empty"
 
 const notify = (target, name, data) => {
   console.log(`${target.name}.${name} has changed ${data}`)
@@ -8,12 +8,12 @@ const notify = (target, name, data) => {
 
 const proxyHandler = {
   get: function(target, name) {
-    return name in target ? target[name] : 'no key'
+    return name in target ? target[name] : "no key"
   },
 
   set: function(target, name, value) {
-    if (name === 'name') {
-      console.error('cant set name prop')
+    if (name === "name") {
+      console.error("cant set name prop")
       return
     }
     target[name] = value
@@ -33,7 +33,7 @@ const reactive = new Proxy(empty, proxyHandler)
 
 reactive.age = 11
 
-reactive.name = 'jack'
+reactive.name = "jack"
 
 console.log(reactive.age)
 

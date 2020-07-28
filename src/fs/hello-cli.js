@@ -3,7 +3,7 @@ const readline = require("readline")
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
-  prompt: "请输入> "
+  prompt: "请输入> ",
 })
 
 rl.prompt()

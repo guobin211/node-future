@@ -1,4 +1,4 @@
-const { PromisePro } = require('./promise-pro')
+const { PromisePro } = require("./promise-pro")
 
 async function getData() {
   return new Promise((resolve, reject) => {

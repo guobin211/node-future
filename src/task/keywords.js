@@ -1,9 +1,9 @@
-const fs = require('fs')
+const fs = require("fs")
 
 async function getDirs() {
   console.log(arguments)
-  const dirs = await fs.readdirSync('./', { withFileTypes: true })
-  console.log('call getDirs')
+  const dirs = await fs.readdirSync("./", { withFileTypes: true })
+  console.log("call getDirs")
   for (const dir of dirs) {
     if (dir.isDirectory()) {
       console.log(`${dir.name} is dir`)
@@ -13,7 +13,7 @@ async function getDirs() {
 }
 
 function getStats() {
-  fs.stat('./post.js', { bigint: 1024 }, (err, data) => {
+  fs.stat("./post.js", { bigint: 1024 }, (err, data) => {
     console.log(data.isDirectory())
     console.log(`
       访问时间: ${data.atime},

@@ -1,10 +1,10 @@
-const fs = require('fs')
-const path = require('path')
-const request = require('request')
+const fs = require("fs")
+const path = require("path")
+const request = require("request")
 
-const HOST = 'http://wuhan2020.org.cn'
-const INDEX = '/data/index.json'
-const FILE = HOST + '/data/fe/'
+const HOST = "http://wuhan2020.org.cn"
+const INDEX = "/data/index.json"
+const FILE = HOST + "/data/fe/"
 
 let isFirst = true
 
@@ -25,7 +25,7 @@ function mapData(map) {
 }
 
 function saveFile(url) {
-  const names = url.split('/')
+  const names = url.split("/")
   const fileName = names[names.length - 1]
   request.get(FILE + url, (error, response, body) => {
     if (error) {
@@ -36,7 +36,7 @@ function saveFile(url) {
       }
       console.log(fileName)
       fs.writeFileSync(
-        path.resolve(__dirname, '..', '..', 'assets', fileName),
+        path.resolve(__dirname, "..", "..", "assets", fileName),
         body
       )
     }

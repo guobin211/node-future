@@ -3,7 +3,7 @@ var obj = {
   "3": 4,
   length: 2,
   splice: Array.prototype.splice,
-  push: Array.prototype.push
+  push: Array.prototype.push,
 }
 
 // {
@@ -19,11 +19,10 @@ obj.push(2)
 console.log(obj)
 
 // 作用域
-var a = {n: 1};
-var b = a;
-a.x = a = {n: 2};
+var a = { n: 1 }
+var b = a
+a.x = a = { n: 2 }
 // undefined
 // { n: 2 }
 console.log(a.x)
 console.log(b.x)
-

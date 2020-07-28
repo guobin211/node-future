@@ -1,12 +1,12 @@
-'use strict'
+"use strict"
 const VIDEO_RESOLUTION = {
-  Universal240: '320*240',
-  Universal480: '648*480',
-  MD: '640*360',
-  MSD: '720*480',
-  SD: '1024*600',
-  HD: '1280*720',
-  FHD: '1920*1080',
+  Universal240: "320*240",
+  Universal480: "648*480",
+  MD: "640*360",
+  MSD: "720*480",
+  SD: "1024*600",
+  HD: "1280*720",
+  FHD: "1920*1080",
 }
 
 /**
@@ -17,7 +17,7 @@ const VIDEO_RESOLUTION = {
  * @returns {*[]}
  */
 function getVideoPicture(videoPath, timestamp, outFile) {
-  return ['-ss', timestamp, '-i', videoPath, '-f', 'image2', '-y', outFile]
+  return ["-ss", timestamp, "-i", videoPath, "-f", "image2", "-y", outFile]
 }
 
 /**
@@ -29,17 +29,17 @@ function getVideoPicture(videoPath, timestamp, outFile) {
  */
 function zipVideo(videoPath, resolution, outFile) {
   return [
-    '-i',
+    "-i",
     videoPath,
-    '-b:v',
-    '64k',
-    '-r',
+    "-b:v",
+    "64k",
+    "-r",
     29.97,
-    '-c:v',
-    'libx264',
-    '-s',
+    "-c:v",
+    "libx264",
+    "-s",
     resolution ? resolution : VIDEO_RESOLUTION.SD,
-    '-strict',
+    "-strict",
     -2,
     outFile,
   ]

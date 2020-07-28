@@ -6,19 +6,21 @@ for (const key in Object.keys(Reflect)) {
 
 const person = {
   name: "jack",
-  age: 22
+  age: 22,
 }
 
-if (Reflect.defineProperty(person, "name", {
-  configurable: true,
-  enumerable: true,
-  get() {
-    return this.value
-  },
-  set(v) {
-    this.value = v;
-  }
-})) {
+if (
+  Reflect.defineProperty(person, "name", {
+    configurable: true,
+    enumerable: true,
+    get() {
+      return this.value
+    },
+    set(v) {
+      this.value = v
+    },
+  })
+) {
   console.log("define success", person)
   console.log(person.name)
   person.name = "tom"

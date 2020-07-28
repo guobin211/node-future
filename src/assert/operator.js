@@ -7,7 +7,7 @@ function binaryToNumber(s) {
 }
 
 let a = 10
-let b = '20'
+let b = "20"
 
 console.log(numberToBinary(a))
 console.log(numberToBinary(b))
@@ -47,22 +47,22 @@ const condition1 = true,
 
 const func1 = function() {
   if (condition1) {
-    return 'value1'
+    return "value1"
   } else if (condition2) {
-    return 'value2'
+    return "value2"
   } else if (condition3) {
-    return 'value3'
+    return "value3"
   } else {
-    return 'value4'
+    return "value4"
   }
 }
 /*条件三元运算符*/
 const func2 = function() {
   return condition1
-    ? 'value1'
+    ? "value1"
     : condition2
-    ? 'value2'
+    ? "value2"
     : condition3
-    ? 'value3'
-    : 'value4'
+    ? "value3"
+    : "value4"
 }

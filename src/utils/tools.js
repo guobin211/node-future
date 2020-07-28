@@ -1,21 +1,21 @@
-'use strict'
+"use strict"
 
 const toString = Object.prototype.toString
 const types = {
-  '[object Boolean]': 'bool',
-  '[object Number]': 'number',
-  '[object String]': 'string',
-  '[object Object]': 'object',
-  '[object Array]': 'array',
-  '[object Function]': 'function',
-  '[object Date]': 'date',
-  '[object RegExp]': 'regExp',
+  "[object Boolean]": "bool",
+  "[object Number]": "number",
+  "[object String]": "string",
+  "[object Object]": "object",
+  "[object Array]": "array",
+  "[object Function]": "function",
+  "[object Date]": "date",
+  "[object RegExp]": "regExp",
 }
 
 module.exports = class Tools {
   static getTag(obj) {
     if (obj == null) {
-      return obj === undefined ? '[object Undefined]' : '[object Null]'
+      return obj === undefined ? "[object Undefined]" : "[object Null]"
     }
     return toString.call(obj)
   }
@@ -37,7 +37,7 @@ module.exports = class Tools {
    * @returns {boolean}
    */
   static isPlainObject(obj) {
-    if (Tools.getTag(obj) !== '[object Object]') {
+    if (Tools.getTag(obj) !== "[object Object]") {
       return false
     }
     if (Object.getPrototypeOf(obj) === null) {

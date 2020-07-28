@@ -1,11 +1,11 @@
-const fs = require('fs')
+const fs = require("fs")
 
-const publicPath = '/Users/guobin/idea/node-future/public/'
+const publicPath = "/Users/guobin/idea/node-future/public/"
 
-const fileBuff1 = fs.readFileSync(publicPath + 'pic1.png')
-const fileBuff2 = fs.readFileSync(publicPath + 'pic2.png')
+const fileBuff1 = fs.readFileSync(publicPath + "pic1.png")
+const fileBuff2 = fs.readFileSync(publicPath + "pic2.png")
 
-console.log(fileBuff1.toString('hex'))
+console.log(fileBuff1.toString("hex"))
 
 function compareBuff(buff1, buff2) {
   const diff = new Map()
@@ -18,9 +18,9 @@ function compareBuff(buff1, buff2) {
   }
   console.log(buff3)
   console.log(buff3[1])
-  fs.writeFileSync(publicPath + 'pic3.png', buff3, {
-    flag: 'w',
-    encoding: 'utf8',
+  fs.writeFileSync(publicPath + "pic3.png", buff3, {
+    flag: "w",
+    encoding: "utf8",
   })
   return diff
 }

@@ -8,9 +8,13 @@ function pipeLog1() {
 
 function pipeLog2() {
   for (var i = 0; i < 10; i++) {
-    setTimeout((j) => {
-      console.log(j)
-    }, 1000, i)
+    setTimeout(
+      j => {
+        console.log(j)
+      },
+      1000,
+      i
+    )
   }
 }
 
@@ -24,7 +28,7 @@ function pipeLog3() {
 
 function pipeLog4() {
   for (var i = 0; i < 10; i++) {
-    (function (j) {
+    ;(function(j) {
       setTimeout(() => {
         console.log(j)
       }, 1000)

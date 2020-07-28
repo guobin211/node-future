@@ -6,7 +6,7 @@
  * */
 var domQuery = (function() {
   if (!window.document) {
-    console.error('domQuery need document runtime')
+    console.error("domQuery need document runtime")
     return
   }
   const aDOMFunc = [
@@ -23,7 +23,7 @@ var domQuery = (function() {
       aNodeList = bStyle ? this.cssNodes : this.nodes
 
     if (bSet && bStyle) {
-      aArgs.push('')
+      aArgs.push("")
     }
     for (
       let nItem = 0, nLen = this.nodes.length;
@@ -52,7 +52,7 @@ var domQuery = (function() {
 
   return function(sSelectors) {
     const oQuery = new Function(
-      'return arguments.callee.follow.apply(arguments.callee, arguments);'
+      "return arguments.callee.follow.apply(arguments.callee, arguments);"
     )
     oQuery.selectors = sSelectors
     oQuery.nodes = document.querySelectorAll(sSelectors)

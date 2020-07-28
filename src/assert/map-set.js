@@ -1,6 +1,6 @@
-const { deepEqual } = require('./deepEqual')
+const { deepEqual } = require("./deepEqual")
 
-const COMPONENT_KEY = 'Vue-Component-'
+const COMPONENT_KEY = "Vue-Component-"
 let componentIndex = 1
 const symbolKey = COMPONENT_KEY + componentIndex++
 
@@ -27,24 +27,24 @@ const set = new Set()
 const weekSet = new WeakSet()
 const emptyObject = Object.create(null)
 const obj = {
-  name: 'native-object',
+  name: "native-object",
 }
 console.log(sb1 === sb2)
 console.log(sb1, sb2)
 
-const jack = { name: 'jack' }
-map.set({ name: 'jack' }, 22)
-weekMap.set({ name: 'jack' }, 22)
+const jack = { name: "jack" }
+map.set({ name: "jack" }, 22)
+weekMap.set({ name: "jack" }, 22)
 set.add(jack)
-set.add({ name: 'jack' })
+set.add({ name: "jack" })
 
 Object.defineProperties(obj, {
   age: {
     get: function() {
-      return map.get('age')
+      return map.get("age")
     },
     set: function(val) {
-      map.set('age', val)
+      map.set("age", val)
     },
   },
 })
@@ -56,7 +56,7 @@ console.log(obj.age)
 
 weekSet.add(jack)
 // false
-console.log(weekSet.has({ name: 'jack' }))
+console.log(weekSet.has({ name: "jack" }))
 
 emptyObject.person = [jack]
 
@@ -64,10 +64,10 @@ emptyObject.has = function(val) {
   return this.person.includes(val)
 }
 // false
-console.log(emptyObject.has({ name: 'jack' }))
+console.log(emptyObject.has({ name: "jack" }))
 // false
-console.log(jack === { name: 'jack' })
+console.log(jack === { name: "jack" })
 // false
-console.log(jack == { name: 'jack' })
+console.log(jack == { name: "jack" })
 // true
-console.log(deepEqual(jack, { name: 'jack' }))
+console.log(deepEqual(jack, { name: "jack" }))

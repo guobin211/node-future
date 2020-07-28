@@ -1,4 +1,4 @@
-const mysqlx = require('@mysql/xdevapi')
+const mysqlx = require("@mysql/xdevapi")
 /**
  getSession
  getClient

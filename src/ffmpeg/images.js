@@ -4,12 +4,12 @@
  * @author GuoBin on 2019-07-16
  */
 
-'use strict'
-const images = require('images')
+"use strict"
+const images = require("images")
 
 const sourceFile =
-  '/Users/guobin/idea/deep-ai/node-future/assets/video/00099.png'
-const out = '/Users/guobin/idea/deep-ai/node-future/assets/images-out.png'
+  "/Users/guobin/idea/deep-ai/node-future/assets/video/00099.png"
+const out = "/Users/guobin/idea/deep-ai/node-future/assets/images-out.png"
 
 function main() {
   try {

@@ -3,7 +3,7 @@ const data1 = "0xd800"
 // JSON数据必须是utf-8编码
 const data2 = {
   a: "\u{d834}",
-  b: "\ud834"
+  b: "\ud834",
 }
 
 console.log(JSON.stringify(data1))

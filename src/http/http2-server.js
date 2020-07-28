@@ -6,8 +6,8 @@ const fs = require("fs")
  */
 const server = http2.createSecureServer({
   key: fs.readFileSync("秘钥.pem"),
-  cert: fs.readFileSync("证书.pem")
-},)
+  cert: fs.readFileSync("证书.pem"),
+})
 
 function onRequest(req, res) {
   const reqPath = req.url === "/" ? "index.html" : req.url
@@ -16,7 +16,7 @@ function onRequest(req, res) {
     res.statusCode = 404
     res.end()
   } else {
-    res.stream.respond({"content-type": "text/html", ":status": 200})
+    res.stream.respond({ "content-type": "text/html", ":status": 200 })
     res.stream.end("<h1>Hello World!</h1>>")
   }
 }

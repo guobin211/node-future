@@ -3,7 +3,7 @@
  *
  * @author GuoBin on 2019-07-16
  */
-'use strict'
+"use strict"
 class EventBus {
   constructor() {
     this._observers = new Map()
@@ -15,8 +15,8 @@ class EventBus {
    * @param observer
    */
   register(type, observer) {
-    if (typeof type !== 'string') {
-      throw new TypeError('type must be string!')
+    if (typeof type !== "string") {
+      throw new TypeError("type must be string!")
     }
     if (this._observers.has(type)) {
       this._observers.get(type).add(observer)
@@ -33,8 +33,8 @@ class EventBus {
    * @param observer
    */
   unregister(type, observer) {
-    if (typeof type !== 'string') {
-      throw new TypeError('type must be string!')
+    if (typeof type !== "string") {
+      throw new TypeError("type must be string!")
     }
     if (this._observers.has(type)) {
       this._observers.get(type).delete(observer)
@@ -47,8 +47,8 @@ class EventBus {
    * @param message
    */
   notify(type, message) {
-    if (typeof type !== 'string') {
-      throw new TypeError('type must be string!')
+    if (typeof type !== "string") {
+      throw new TypeError("type must be string!")
     }
     try {
       this._observers.get(type).forEach(observer => {

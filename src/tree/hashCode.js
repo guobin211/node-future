@@ -8,13 +8,13 @@ function hashCode(str) {
   return char
 }
 
-const name = 'jack'
+const name = "jack"
 const res = hashCode(name)
 console.log(res)
 
-const b = Buffer.from('hello')
-const s = b.toString('base64')
+const b = Buffer.from("hello")
+const s = b.toString("base64")
 console.log(s)
 
-const rb = Buffer.from(s, 'base64')
+const rb = Buffer.from(s, "base64")
 console.log(rb.toString())

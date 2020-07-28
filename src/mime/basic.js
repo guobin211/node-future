@@ -24,11 +24,11 @@ testBasicObject()
 console.log(Object.constructor === Function)
 console.log(function() {}.constructor === Function)
 
-const sum = new Function('a', 'b', 'return a + b')
+const sum = new Function("a", "b", "return a + b")
 console.log(sum(1, 2))
 
 const jack = {
-  name: 'jack',
+  name: "jack",
   age: 22,
 }
 

@@ -3,19 +3,19 @@
  *
  * @author GuoBin on 2019-07-25
  */
-'use strict'
-const fs = require('fs')
-const zlib = require('zlib')
-const file = '/Users/guobin/idea/node-future/src/fs/2.png'
+"use strict"
+const fs = require("fs")
+const zlib = require("zlib")
+const file = "/Users/guobin/idea/node-future/src/fs/2.png"
 const PNG_CHUNK_TYPE = {
   // 文件头数据块
-  IHDR: 'IHDR',
+  IHDR: "IHDR",
   // 调色板数据块
-  PLTE: 'PLTE',
+  PLTE: "PLTE",
   // 图像数据块
-  IDAT: 'IDAT',
+  IDAT: "IDAT",
   // 图像结束数据
-  IEND: 'IEND',
+  IEND: "IEND",
 }
 const IHDR_FIELDS_BYTES = {
   width: 4,
@@ -32,8 +32,8 @@ function parsePng() {
   const PNG_HEADER = [137, 80, 78, 71, 13, 10, 26, 10]
   const stream = fs.createReadStream(file)
   stream.pause()
-  stream.on('readable', () => {
-    console.log('readable')
+  stream.on("readable", () => {
+    console.log("readable")
     if (chuck === 0) {
       const head = checkHead()
       console.log(head)
@@ -73,7 +73,7 @@ function parsePng() {
         pngInfo.binds = 3
         break
       case 3:
-        throw new Error('不支持索引色')
+        throw new Error("不支持索引色")
       case 4:
         pngInfo.binds = 2
         break
@@ -81,7 +81,7 @@ function parsePng() {
         pngInfo.binds = 4
         break
       default:
-        throw new Error('Unknown colorType')
+        throw new Error("Unknown colorType")
     }
     console.log(pngInfo)
     // CRC
@@ -117,7 +117,7 @@ function parsePng() {
           break
         default:
           // 跳过其他数据块
-          console.log('Skip', name, length)
+          console.log("Skip", name, length)
           // length+4为data+CRC的数据长度
           stream.read(length + 4)
           stream.readChunk(readHeadAndLength())
@@ -129,7 +129,7 @@ function parsePng() {
     let buff = Buffer.alloc(8)
     buff = stream.read(8)
     const length = buff.readInt32BE(0)
-    const name = buff.toString('utf8', 4, 8)
+    const name = buff.toString("utf8", 4, 8)
     return { name, length }
   }
 
@@ -139,10 +139,10 @@ function parsePng() {
     for (let i = 0; i < PNG_HEADER.length; i++) {
       const v = buff.readUInt8(i)
       if (v !== PNG_HEADER[i]) {
-        throw new Error('not PNG file')
+        throw new Error("not PNG file")
       }
     }
-    return buff.toString('utf8', 1, 8)
+    return buff.toString("utf8", 1, 8)
   }
 }
 

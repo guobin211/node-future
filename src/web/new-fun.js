@@ -1,14 +1,14 @@
 function newFn(fn, ...args) {
   const obj = Object.create(fn.prototype)
   const res = fn.apply(obj, args)
-  return res instanceof Object ? res: obj
+  return res instanceof Object ? res : obj
 }
 
 function Person(name) {
   this.name = name
 }
 
-Person.prototype.say = function () {
+Person.prototype.say = function() {
   console.log("hello " + this.name)
 }
 

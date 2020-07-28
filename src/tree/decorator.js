@@ -3,10 +3,10 @@
  * @constructor
  */
 function Car() {
-  this.name = 'Car'
+  this.name = "Car"
 }
 
-Object.defineProperty(Car.prototype, 'run', {
+Object.defineProperty(Car.prototype, "run", {
   value: function(spead) {
     console.log(`${this.name} run with ${spead}`)
   },
@@ -28,7 +28,7 @@ console.log(new Car())
  */
 class MiniCar {
   constructor() {
-    this.name = 'MiniCar'
+    this.name = "MiniCar"
   }
 
   run(spead) {

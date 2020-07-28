@@ -3,8 +3,8 @@ let timeKey = 0
 module.exports = exports = {
   funcTime: (func, params, callback) => {
     timeKey++
-    if (typeof func === 'function') {
-      const label = func.name + timeKey + ''
+    if (typeof func === "function") {
+      const label = func.name + timeKey + ""
       console.time(label)
       func(
         params ? params : null,

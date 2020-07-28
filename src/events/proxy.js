@@ -1,5 +1,5 @@
 let data = {
-  name: 'jack',
+  name: "jack",
   age: 11,
 }
 

@@ -3,8 +3,8 @@
  *
  * @author GuoBin on 2019-07-18
  */
-'use strict'
-const NodeMediaServer = require('node-media-server')
+"use strict"
+const NodeMediaServer = require("node-media-server")
 
 const config = {
   rtmp: {
@@ -16,76 +16,76 @@ const config = {
   },
   http: {
     port: 3303,
-    allow_origin: '*',
+    allow_origin: "*",
   },
   auth: {
     play: true,
     publish: true,
-    secret: '123456',
+    secret: "123456",
   },
 }
 
 const nodeMediaServer = new NodeMediaServer(config)
 
-nodeMediaServer.on('preConnect', (id, args) => {
+nodeMediaServer.on("preConnect", (id, args) => {
   console.log(
-    '[NodeEvent on preConnect]',
+    "[NodeEvent on preConnect]",
     `id=${id} args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('postConnect', (id, args) => {
+nodeMediaServer.on("postConnect", (id, args) => {
   console.log(
-    '[NodeEvent on postConnect]',
+    "[NodeEvent on postConnect]",
     `id=${id} args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('doneConnect', (id, args) => {
+nodeMediaServer.on("doneConnect", (id, args) => {
   console.log(
-    '[NodeEvent on doneConnect]',
+    "[NodeEvent on doneConnect]",
     `id=${id} args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('prePublish', (id, args) => {
+nodeMediaServer.on("prePublish", (id, args) => {
   console.log(
-    '[NodeEvent on prePublish]',
+    "[NodeEvent on prePublish]",
     `id=${id}  args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('postPublish', (id, args) => {
+nodeMediaServer.on("postPublish", (id, args) => {
   console.log(
-    '[NodeEvent on postPublish]',
+    "[NodeEvent on postPublish]",
     `id=${id} args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('donePublish', (id, streamPath, args) => {
+nodeMediaServer.on("donePublish", (id, streamPath, args) => {
   console.log(
-    '[NodeEvent on donePublish]',
+    "[NodeEvent on donePublish]",
     `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('prePlay', (id, streamPath, args) => {
+nodeMediaServer.on("prePlay", (id, streamPath, args) => {
   console.log(
-    '[NodeEvent on prePlay]',
+    "[NodeEvent on prePlay]",
     `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('postPlay', (id, streamPath, args) => {
+nodeMediaServer.on("postPlay", (id, streamPath, args) => {
   console.log(
-    '[NodeEvent on postPlay]',
+    "[NodeEvent on postPlay]",
     `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`
   )
 })
 
-nodeMediaServer.on('donePlay', (id, streamPath, args) => {
+nodeMediaServer.on("donePlay", (id, streamPath, args) => {
   console.log(
-    '[NodeEvent on donePlay]',
+    "[NodeEvent on donePlay]",
     `id=${id} StreamPath=${streamPath} args=${JSON.stringify(args)}`
   )
 })

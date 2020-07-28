@@ -3,8 +3,8 @@
  *
  * @author GuoBin on 2019-06-30
  */
-'use strict'
-const EventEmitter = require('events')
+"use strict"
+const EventEmitter = require("events")
 
 class ProcessEvents extends EventEmitter {
   constructor() {

@@ -1,6 +1,6 @@
-'use strict'
-const net = require('net')
-const Tools = require('../utils/tools')
+"use strict"
+const net = require("net")
+const Tools = require("../utils/tools")
 console.log(Tools.getAttributes(net))
 
 const str =
@@ -18,22 +18,22 @@ Access-Control-Allow-Methods: *
 `
 
 const server = net.createServer(Socket => {
-  console.log('client connection')
-  Socket.on('data', buff => {
+  console.log("client connection")
+  Socket.on("data", buff => {
     console.log(buff.toString())
     Socket.write(responseBase)
     Socket.end()
   })
-  Socket.on('end', () => {
-    console.log('end')
+  Socket.on("end", () => {
+    console.log("end")
   })
 })
-server.on('error', err => {
+server.on("error", err => {
   console.log(err.code)
   console.error(err.message)
 })
-server.listen(3001, 'localhost', 1, () => {
-  console.log('net server port 3001')
+server.listen(3001, "localhost", 1, () => {
+  console.log("net server port 3001")
 })
 
 function handleHttp(str) {

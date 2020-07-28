@@ -1,5 +1,5 @@
-const { createConnection } = require('./connect')
-const { config } = require('./config')
+const { createConnection } = require("./connect")
+const { config } = require("./config")
 
 function run() {
   const connect = createConnection(config)
@@ -43,7 +43,7 @@ function tableCount(connect, callback) {
     if (err) {
       console.error(err)
     }
-    callback(results[0]['COUNT(*)'])
+    callback(results[0]["COUNT(*)"])
   })
 }
 

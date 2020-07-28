@@ -1,5 +1,5 @@
 function findVideo() {
-  const video = document.querySelector('video')
+  const video = document.querySelector("video")
   if (video.firstChild) {
     return video.firstChild.src
   } else {
@@ -8,7 +8,7 @@ function findVideo() {
 }
 
 function download(src) {
-  const a = document.createElement('a')
+  const a = document.createElement("a")
   a.download
   a.href = src
   a.click()

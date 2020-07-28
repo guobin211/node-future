@@ -3,7 +3,7 @@
  *
  * @author GuoBin on 2019-07-16
  */
-'use strict'
+"use strict"
 
 class Node {
   constructor(element) {

@@ -3,9 +3,9 @@
  *
  * @author GuoBin on 2019-06-30
  */
-'use strict'
-const assert = require('assert').strict
-const person = require('./person')
+"use strict"
+const assert = require("assert").strict
+const person = require("./person")
 console.log(person)
 const obj1 = {
   a: {
@@ -24,7 +24,7 @@ const obj3 = {
 }
 const obj4 = Object.create(obj1)
 assert.deepEqual(obj1, obj1)
-console.log('obj1 obj2 is ok')
+console.log("obj1 obj2 is ok")
 // 深度断言 递归遍历iterator属性
 assert.deepStrictEqual(obj1, obj1)
 // AssertionError
@@ -34,5 +34,5 @@ assert.deepStrictEqual(obj1, obj1)
 //     }
 // assert.deepEqual(obj1, obj2);
 assert.deepEqual(obj1, obj3)
-console.log('obj1 obj3 is ok')
+console.log("obj1 obj3 is ok")
 // assert.deepEqual(obj1, obj4);

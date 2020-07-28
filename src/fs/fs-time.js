@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require("path")
 const {
   readFile,
   readFileSync,
@@ -10,15 +10,15 @@ const {
   realpathSync,
   rename,
   renameSync,
-} = require('fs')
-const { funcTime } = require('../utils/func-time')
+} = require("fs")
+const { funcTime } = require("../utils/func-time")
 
 const files = [
-  './2.png',
-  './compress-image.js',
-  './fs-time.js',
-  './parse-json.js',
-  './read-buffer.js',
+  "./2.png",
+  "./compress-image.js",
+  "./fs-time.js",
+  "./parse-json.js",
+  "./read-buffer.js",
 ]
 
 function logCall(data) {

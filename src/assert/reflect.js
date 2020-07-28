@@ -2,7 +2,7 @@
  * Reflect 是一个内置的对象，它提供拦截 JavaScript 操作的方法
  * */
 Reflect.metadata = {
-  name: 'metadata',
+  name: "metadata",
 }
 
 console.log(Reflect)

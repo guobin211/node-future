@@ -1,9 +1,9 @@
-'use strict'
-const path = require('path')
-const ReadFileType = require('./read-file-type')
+"use strict"
+const path = require("path")
+const ReadFileType = require("./read-file-type")
 
-const filePath = path.resolve(__dirname, '../../assets', 'record.webm')
-const targetPath = '/Users/guobin/idea/node-c/lib/node-future/assets/record.mp4'
+const filePath = path.resolve(__dirname, "../../assets", "record.webm")
+const targetPath = "/Users/guobin/idea/node-c/lib/node-future/assets/record.mp4"
 
 try {
   // ReadFileType.transformWebm(filePath, targetPath);

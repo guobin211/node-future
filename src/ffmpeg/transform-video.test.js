@@ -1,7 +1,7 @@
-'use strict'
-const { transCodeFile } = require('./transform-video')
-const inputFile = '/Users/guobin/idea/node-c/lib/node-future/assets/record.webm'
-const outDIR = '/Users/guobin/idea/node-c/lib/node-future/assets/ffmpeg'
+"use strict"
+const { transCodeFile } = require("./transform-video")
+const inputFile = "/Users/guobin/idea/node-c/lib/node-future/assets/record.webm"
+const outDIR = "/Users/guobin/idea/node-c/lib/node-future/assets/ffmpeg"
 
 transCodeFile(
   inputFile,
@@ -14,4 +14,4 @@ transCodeFile(
   }
 )
 
-console.log('test')
+console.log("test")

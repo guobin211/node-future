@@ -5,16 +5,16 @@ module.exports = {
     node: true,
     browser: true,
   },
-  extends: 'eslint:recommended',
+  extends: "eslint:recommended",
   globals: {
-    Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly',
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
   },
   parserOptions: {
     ecmaVersion: 2019,
   },
   rules: {
-    'no-unused-vars': 'off',
-    'no-extra-semi': 0,
+    "no-unused-vars": "off",
+    "no-extra-semi": 0,
   },
 }

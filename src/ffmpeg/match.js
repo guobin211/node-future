@@ -3,15 +3,15 @@
  *
  * @author GuoBin on 2019-07-16
  */
-'use strict'
+"use strict"
 
-const fs = require('fs')
-const PNG = require('pngjs').PNG
-const PixelMatch = require('pixelmatch')
+const fs = require("fs")
+const PNG = require("pngjs").PNG
+const PixelMatch = require("pixelmatch")
 
-const file1 = '/Users/guobin/idea/node-future/src/media-server/2.png'
-const file2 = '/Users/guobin/idea/node-future/src/media-server/9.png'
-const out = '/Users/guobin/idea/node-future/assets/diff.png'
+const file1 = "/Users/guobin/idea/node-future/src/media-server/2.png"
+const file2 = "/Users/guobin/idea/node-future/src/media-server/9.png"
+const out = "/Users/guobin/idea/node-future/assets/diff.png"
 
 /**
  * compare image
@@ -26,7 +26,7 @@ function main() {
       threshold: 0.1,
     })
     fs.writeFileSync(out, PNG.sync.write(diff))
-    console.log('success')
+    console.log("success")
   } catch (e) {
     console.log(e.message)
   }

@@ -1,9 +1,9 @@
-const fs = require('fs')
-const config = require('../config')
+const fs = require("fs")
+const config = require("../config")
 console.log(config.assets)
-const langZH = require('../../assets/data/lang-zh.json')
-const tw = require('../../assets/data/zh-hk.json')
-const en = require('../../assets/data/en.json')
+const langZH = require("../../assets/data/lang-zh.json")
+const tw = require("../../assets/data/zh-hk.json")
+const en = require("../../assets/data/en.json")
 
 function mergeLang(source, input, out) {
   for (const key in source) {
@@ -15,4 +15,4 @@ function mergeLang(source, input, out) {
 }
 
 // mergeLang(langZH, tw, './zh-tw.json')
-mergeLang(langZH, en, './zh-en.json')
+mergeLang(langZH, en, "./zh-en.json")

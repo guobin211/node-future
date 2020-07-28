@@ -9,14 +9,14 @@ function test(person) {
   * person = obj
   * */
   person = {
-    name: 'hzj',
+    name: "hzj",
     age: 18,
   }
   return person
 }
 
 const p1 = {
-  name: 'fyq',
+  name: "fyq",
   age: 19,
 }
 const data = null

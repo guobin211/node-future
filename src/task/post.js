@@ -3,14 +3,14 @@
  *
  * @author GuoBin on 2019-07-19
  */
-'use strict'
-const request = require('request')
+"use strict"
+const request = require("request")
 
 let id = 25
 
 function send(id) {
   const req = request.post(
-    'http://139.198.13.158:9120/routingMonitoring/BuyGreenBeansV2',
+    "http://139.198.13.158:9120/routingMonitoring/BuyGreenBeansV2",
     {
       form: {
         id: id,

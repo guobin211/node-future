@@ -1,6 +1,6 @@
-'use strict'
-const fs = require('fs')
-const mime = require('mime')
+"use strict"
+const fs = require("fs")
+const mime = require("mime")
 
 class ReadFileType {
   constructor() {}
@@ -28,15 +28,15 @@ class ReadFileType {
    * @param target
    */
   transformWebm(src, target) {
-    console.time('转换耗时:')
+    console.time("转换耗时:")
     const inputStream = fs.createReadStream(src)
     const outputStream = fs.createWriteStream(target)
-    inputStream.on('data', buff => {
+    inputStream.on("data", buff => {
       outputStream.write(buff)
     })
-    inputStream.on('close', () => {
+    inputStream.on("close", () => {
       outputStream.close()
-      console.timeEnd('转换耗时:')
+      console.timeEnd("转换耗时:")
     })
   }
 }

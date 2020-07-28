@@ -1,4 +1,4 @@
-const fs = require('fs')
+const fs = require("fs")
 /*
 * clearInterval
   clearTimeout
@@ -24,18 +24,18 @@ function printTask() {
  * 3. I/O
  * */
 
-fs.readFile('./es2018.js', () => {
-  console.log('node I/O')
+fs.readFile("./es2018.js", () => {
+  console.log("node I/O")
   printTask()
 })
 
 setImmediate(() => {
-  console.log('setImmediate')
+  console.log("setImmediate")
   printTask()
 })
 
 setTimeout(() => {
-  console.log('setTimeout')
+  console.log("setTimeout")
   printTask()
 })
 
@@ -46,17 +46,17 @@ setTimeout(() => {
  * */
 
 global.queueMicrotask(() => {
-  console.log('queueMicrotask')
+  console.log("queueMicrotask")
   printTask()
 })
 
 Promise.resolve().then(() => {
-  console.log('Promise')
+  console.log("Promise")
   printTask()
 })
 
 process.nextTick(() => {
-  console.log('process.nextTick')
+  console.log("process.nextTick")
   printTask()
 })
 

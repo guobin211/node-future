@@ -1,8 +1,8 @@
-'use strict'
-const fs = require('fs')
-const path = require('path')
-const { spawn } = require('child_process')
-const ffmpegPath = '/usr/local/bin/ffmpeg'
+"use strict"
+const fs = require("fs")
+const path = require("path")
+const { spawn } = require("child_process")
+const ffmpegPath = "/usr/local/bin/ffmpeg"
 
 /**
  * 转换视频文件
@@ -19,17 +19,17 @@ function transCodeFile(file, target, processCallback, completeCallback) {
   }
   let outPath = path.join(target, path.basename(file))
   outPath =
-    outPath.substr(0, outPath.length - path.extname(outPath).length) + '.mp4'
-  const ffmpeg = spawn(ffmpegPath, ['-i', file, '-y', '-r', 30, outPath])
-  ffmpeg.stdout.on('data', data => {
+    outPath.substr(0, outPath.length - path.extname(outPath).length) + ".mp4"
+  const ffmpeg = spawn(ffmpegPath, ["-i", file, "-y", "-r", 30, outPath])
+  ffmpeg.stdout.on("data", data => {
     console.log(`stdout: ${data.toString()}`)
   })
   // ffmpeg进度信息
-  ffmpeg.stderr.on('data', data => {
+  ffmpeg.stderr.on("data", data => {
     processCallback(data.toString())
   })
   // 完成
-  ffmpeg.on('close', code => {
+  ffmpeg.on("close", code => {
     console.log(`退出代码${code}`)
     completeCallback(code === 0)
   })

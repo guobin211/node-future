@@ -10,7 +10,6 @@ const promise2 = new Promise(resolve => {
   })
 })
 
-
 const promiseAll = [promise1, promise2]
 
 function getData(times) {

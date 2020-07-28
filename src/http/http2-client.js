@@ -1,10 +1,10 @@
 const http2 = require("http2")
 const fs = require("fs")
 const client = http2.connect("https://localhost:8443", {
-  ca: fs.readFileSync("证书.pem")
+  ca: fs.readFileSync("证书.pem"),
 })
 
-client.on("error", (err) => console.error(err))
+client.on("error", err => console.error(err))
 
 const req = client.request({ ":path": "/" })
 
@@ -16,7 +16,7 @@ req.on("response", (headers, flags) => {
 
 req.setEncoding("utf8")
 let data = ""
-req.on("data", (chunk) => {
+req.on("data", chunk => {
   data += chunk
 })
 req.on("end", () => {

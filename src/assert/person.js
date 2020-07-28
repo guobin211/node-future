@@ -4,11 +4,11 @@
  * @author GuoBin on 2019-07-06
  */
 const person = Object.create(null)
-person.name = 'jack'
+person.name = "jack"
 person.age = 22
 
 function Car() {
-  this.name = 'car'
+  this.name = "car"
   this.run = function() {
     // arguments接收函数参数
     console.log(arguments)

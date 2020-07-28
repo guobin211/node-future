@@ -1,6 +1,6 @@
 function BaseObject() {
   this.size = 0
-  this.name = 'BaseObject'
+  this.name = "BaseObject"
 }
 
 BaseObject.prototype.run = function() {
@@ -10,7 +10,7 @@ BaseObject.prototype.run = function() {
 
 function SubObject() {
   this.size = 10
-  this.name = 'SubObject'
+  this.name = "SubObject"
 }
 
 /**
@@ -30,7 +30,7 @@ Object.prototype.extend = function(father) {
   return this
 }
 const base = new BaseObject()
-const obj = { name: 'sub', age: 22 }
+const obj = { name: "sub", age: 22 }
 const sub = obj.extend(base)
 console.log(sub === obj)
 console.log(sub)
