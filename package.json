@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier \"**/*.js\" --ignore-path ./.prettierignore --write && git status"
+    "format": "prettier \"**/*.js\" --ignore-path ./.prettierignore --write && git status",
+    "start": "node src/net/net-server.js && node src/net/net-client.js"
   },
   "repository": {
     "url": "https://github.com/guobin211/node-future"
