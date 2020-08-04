@@ -5,7 +5,9 @@ const data2 = {
   a: "\u{d834}",
   b: "\ud834",
 }
-
+// unicode分为utf-8和utf-16编码
+// utf-8编码的string分为 1，2，3，4byte
+// utf-16编码的string分为2，4byte
 console.log(JSON.stringify(data1))
 
 for (const [key, val] of Object.entries(data2)) {
