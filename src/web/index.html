@@ -16,9 +16,28 @@
 </head>
 <body>
 <div>
+    <label>
+        <input id="input" type="text" value="">
+        <button type="button" onclick="handleClick()">submit</button>
+    </label>
+    <img src="/api?cookie=document.cookie" alt="img">
+    <div id="script">
+    <!-- <script>alert(1)</script> -->
+    </div>
     <div id="mountNode"></div>
 </div>
+<!-- async并行下载js，不阻塞html解析， defer延迟执行js -->
+<script src="index.js" defer></script>
 <script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g6-3.4.7/dist/g6.min.js"></script>
-<script src="index.js"></script>
+<script>
+  var div = document.getElementById("script");
+  var input = document.getElementById("input");
+  div.innerHTML = localStorage.getItem("val");
+  function handleClick() {
+    const jsData = input.value;
+    localStorage.setItem("val", jsData);
+    div.innerHTML = jsData;
+  }
+</script>
 </body>
 </html>
