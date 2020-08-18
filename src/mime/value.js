@@ -15,7 +15,7 @@ console.log(10 / 0)
 // 判断
 console.log(Number.isNaN(10))
 console.log(Number.isFinite(10 / 0))
-console.log(eval(2 + 3))
+console.log(eval("2" + 3))
 // 解码一个西里尔字母（Cyrillic）URL
 console.log(
   decodeURI(

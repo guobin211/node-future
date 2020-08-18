@@ -1,7 +1,7 @@
 console.log(String.prototype)
 
 const str = "jack"
-const stro = new String("jack")
+const stro = String("jack")
 // false
 console.log(str === stro)
 let strref = stro
