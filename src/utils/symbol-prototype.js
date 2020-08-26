@@ -12,13 +12,13 @@ const data = {
   [Symbol.toStringTag]() {
     return "[object data]"
   },
-  [Symbol.iterator]: function *() {
+  [Symbol.iterator]: function*() {
     yield this.name
     yield this.rating
   },
   [Symbol.toString]() {
     return `{name: ${this.name}, rating: ${this.rating}`
-  }
+  },
 }
 
 console.log(data)

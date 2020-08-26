@@ -6,7 +6,7 @@ function Person(name) {
   console.log("Person", this)
 }
 
-const print = (obj) => {
+const print = obj => {
   console.log("print", this)
   console.log(obj)
 }

@@ -17,18 +17,22 @@
 const STRING_BREAK = "\r\n"
 const STRING_SPACE = " "
 
-
 function parseTemplate(componentFile) {
   const { className, body, prefix, description } = componentFile
 
   const output = {
-    "prefix": `${prefix}`,
-    "body": [],
-    "description": `${description}`
+    prefix: `${prefix}`,
+    body: [],
+    description: `${description}`,
   }
   output.body.push(STRING_BREAK)
-  output.body.push("  return (",)
+  output.body.push("  return (")
   console.log(output)
 }
 
-parseTemplate({className: "MButton", body: [], description: "React.FC", prefix: "rfc"})
+parseTemplate({
+  className: "MButton",
+  body: [],
+  description: "React.FC",
+  prefix: "rfc",
+})

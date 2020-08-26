@@ -8,7 +8,7 @@ function myCallPolyfill() {
 }
 
 const jack = {
-  name: "jack"
+  name: "jack",
 }
 
 function dePrint(obj) {

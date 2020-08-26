@@ -28,7 +28,6 @@ functional(3)
     console.log("other")
   })
 
-
 class Target {
   constructor(condition) {
     this.condition = condition

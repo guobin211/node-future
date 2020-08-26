@@ -6,7 +6,7 @@ function printProps(obj) {
   }
 }
 
-const arr1 = [1,2,3]
+const arr1 = [1, 2, 3]
 const arr2 = new Array(5).fill(1)
 const arr3 = Array.from("abcde")
 

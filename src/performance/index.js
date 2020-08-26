@@ -1,6 +1,7 @@
 ;(function() {
   const lib = window.__lib
-  let anima, count = 0
+  let anima,
+    count = 0
   console.log(lib)
 
   window.onload = function(ev) {
@@ -35,7 +36,6 @@
     } else {
       window.cancelAnimationFrame(anima)
     }
-
   }
   animaFn()
 

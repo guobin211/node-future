@@ -6,7 +6,6 @@ var b = 10
   // [Function: b]
   console.log(b)
 })()
-
 ;(function() {
   console.log(b)
   b = 20

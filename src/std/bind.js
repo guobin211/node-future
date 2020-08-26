@@ -16,7 +16,7 @@ function dePrint(obj) {
 }
 
 const target = {
-  name: "jack"
+  name: "jack",
 }
 
 function testBind() {

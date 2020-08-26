@@ -1,7 +1,7 @@
 ;(function() {
   console.log("lib load")
   window.__lib = {
-    app: "lib"
+    app: "lib",
   }
   new Promise(resolve => {
     console.log("Promise")
