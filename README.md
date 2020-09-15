@@ -34,3 +34,11 @@
 ```
 
 ### git 使用
+
+git checkout branch
+
+git commit
+
+git push
+
+git merge
