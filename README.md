@@ -48,3 +48,5 @@ git merge --no--ff
 git merge ff
 
 保留分支信息
+
+不保留分支信息
