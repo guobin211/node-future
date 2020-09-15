@@ -42,3 +42,5 @@ git commit
 git push
 
 git merge
+
+git merge --no--ff
