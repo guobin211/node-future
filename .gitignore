@@ -89,6 +89,5 @@ typings/
 assets
 public
 *.png
-package-lock.json
 .idea
 .vscode
