@@ -25,4 +25,5 @@ function Person(name = "", age = 0) {
 
 const p1 = new Person("jack", 22)
 const p2 = new Person("tom", 19)
+
 console.log(p1.name)
